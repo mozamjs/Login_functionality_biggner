@@ -6,12 +6,11 @@ const Home = () => {
 
   const navigate = useNavigate()
 
-  useEffect(()=>{
-    const getCurrentUser = async()=>{
-      const {data, error} = await supabase.auth.getUser()
+  useEffect(() => {
+    const getCurrentUser = async () => {
+      const { data, error } = await supabase.auth.getUser()
 
-      if(!data.user){
-        console.log(error.message)
+      if (!data.user) {
         navigate('/auth')
         return
       }
@@ -24,16 +23,18 @@ const Home = () => {
 
 
   //Logout
-  const handlelogout = async ()=>{
+  const handlelogout = async () => {
     await supabase.auth.signOut()
     navigate('/auth')
   }
 
 
   return (
-    <div>
-      <button onClick={handlelogout}>Logout</button>
-      <h1>Home</h1>
+    <div className="page-center">
+      <div className='main-card'>
+        <h1 >Home</h1>
+        <button onClick={handlelogout}>Logout</button>
+      </div>
     </div>
   )
 }

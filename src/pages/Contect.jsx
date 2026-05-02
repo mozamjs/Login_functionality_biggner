@@ -2,9 +2,12 @@ import React from 'react'
 
 const Contect = () => {
   return (
-    <div>
-      <h1>Contect</h1>
-    </div>
+    <div className="page-center">
+  <div className="main-card">
+    <h1>Contect</h1>
+    <p>This is Contect page</p>
+  </div>
+</div>
   )
 }
 
