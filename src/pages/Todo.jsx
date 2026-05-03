@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { supabase } from '../config/supabase/supabase';
-import { useNavigate } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 
 const Todo = () => {
     const [title, setTitle] = useState("")
